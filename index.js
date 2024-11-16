@@ -18,6 +18,7 @@ const dbPath = path.join(__dirname, './BD4/database.sqlite');
 })();
 
 app.use(express.static('static'));
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
